@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<link href="../../../../../backend/modules/bootstrap/bootstrap-3.0.3.min.css" rel="stylesheet">
+		<style>
+			div.container {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			h3 {
+				margin-bottom: 25px;
+			}
+			blockquote {
+				margin-bottom: 50px;
+			}
+			.well ul {
+				padding-left: 20px;
+				margin-bottom: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<h1>Frapp Docs</h1>
+			</div>
+			<ol>
+				<li><a href="#api">Frapp Public A.P.I.</a></li>
+				<ol>
+					<li><a href="#apiMethods">Methods</a></li>
+					<li><a href="#apiEvents">Events</a></li>
+				</ol>
+				<li><a href="#bootstrap">Bootstrap module</a></li>
+				<li><a href="#handlebars">Handlebars module</a></li>
+				<li><a href="#jquery">jQuery module</a></li>
+				<li><a href="#lang">Lang module</a></li>
+				<li><a href="#less">Less module</a></li>
+				<li><a href="#session">Session module</a></li>
+			</ol>
+			<a name="api"></a>
+			<div class="page-header">
+				<h1>1. Frapp Public A.P.I.</h1>
+			</div>
+			<a name="apiMethods"></a>
+			<h3>Methods</h3>
+			<h4><code>FRAPP.close()</code></h4>
+			<blockquote><p>Closes the current Frapp window</p></blockquote>
+			<h4><code>FRAPP.create(params, callback)</code></h4>
+			<blockquote>
+				<div class="well well-sm">
+					<ul>
+						<li>@params: { name : 'AppName' }</li>
+					</ul>
+				</div>
+				<p>Creates a new Frapp</p>
+			</blockquote>
+			<h4><code>FRAPP.edit(frapp)</code></h4>
+			<blockquote>
+				<div class="well well-sm">
+					<ul>
+						<li>@frapp: Frapp (repo)</li>
+					</ul>
+				</div>
+				<p>Launches frapp code on the FrappEditor</p>
+			</blockquote>
+			<h4><code>FRAPP.installed(callback)</code></h4>
+			<blockquote><p>Returns an array of installed Frapps</p></blockquote>
+			<h4><code>FRAPP.menu()</code></h4>
+			<blockquote><p>Loads the FrappsMenu</p></blockquote>
+			<h4><code>FRAPP.load(frapp, params, closeCaller)</code></h4>
+			<blockquote>
+				<div class="well well-sm">
+					<ul>
+						<li>@frapp: { repository : { type: 'git', url : 'https://github.com/{author}/{frapp}.git' } }</li>
+						<li>@params: Optional launch params (See: frap.init event)</li>
+						<li>@closeCaller: (bool) It closes the current Frapp when loading the new one when true.</li>
+					</ul>
+				</div>
+				<p>Loads a Frapp. It also downloads and installs it first if is not alredy on the Frapps folder.</p>
+			</blockquote>
+			<h4><code>FRAPP.readFile(filePath, callback)</code></h4>
+			<blockquote><p>Reads a File (relative paths inside Frapps folder only)</p></blockquote>
+			<h4><code>FRAPP.reload()</code></h4>
+			<blockquote><p>Reloads the current Frapp</p></blockquote>
+			<h4><code>FRAPP.saveFile(filePath, data, callback)</code></h4>
+			<blockquote><p>Saves a File (relative paths inside Frapps folder only)</p></blockquote>
+			<h4><code>FRAPP.setTitle(title)</code></h4>
+			<blockquote><p>Sets the Frapp window title</p></blockquote>
+			<h4><code>FRAPP.signin(auth, callback)</code></h4>
+			<blockquote>
+				<div class="well well-sm">
+					<ul>
+						<li>@auth: { username : '{username}', password : '{password}'}</li>
+					</ul>
+				</div>
+				<p>Signs the user into GitHub</p>
+			</blockquote>
+			<h4><code>FRAPP.signout()</code></h4>
+			<blockquote><p>Signs out the user from GitHub</p></blockquote>
+			<h4><code>FRAPP.showDevTools()</code></h4>
+			<blockquote><p>Shows the DevTools for the current Frapp</p></blockquote>
+			<h4><code>FRAPP.storage()</code></h4>
+			<blockquote><p>Returns a key value storage on the current Frapp's namespace</p></blockquote>
+			<h4><code>FRAPP.version()</code></h4>
+			<blockquote><p>Returns the Frapp engine version &amp; the current Frapp version</p></blockquote>
+
+			<a name="apiEvents"></a>
+			<h3>Events</h3>
+			<h4><code>window.addEventListener('frapp.init')</code></h4>
+			<blockquote>
+				<p>Triggered to the current Frapp windo when the modules are loaded &amp; the A.P.I. is ready.</p>
+				<p>event.detail can contain the optional launch params for the current Frapp (<code>params</code>) and the current session user (<code>session</code>)</p>
+			</blockquote>
+			<h4><code>window.addEventListener('frapp.signin', callback)</code></h4>
+			<blockquote><p>Trigered to all Frapp windows when the user signs in.</p></blockquote>
+			<h4><code>window.addEventListener('frapp.signout', callback)</code></h4>
+			<blockquote><p>Trigered to all Frapp windows when the user signs out.</p></blockquote>
+			<hr>
+			<a name="bootstrap"></a>
+			<div class="page-header">
+				<h1>2. Bootstrap module</h1>
+			</div>
+			<div class="well">Coming soon!!!</div>
+			<hr>
+			<a name="handlebars"></a>
+			<div class="page-header">
+				<h1>3. Handlebars module</h1>
+			</div>
+			<div class="well">Coming soon!!!</div>
+			<hr>
+			<a name="jquery"></a>
+			<div class="page-header">
+				<h1>4. jQuery module</h1>
+			</div>
+			<div class="well">Coming soon!!!</div>
+			<hr>
+			<a name="lang"></a>
+			<div class="page-header">
+				<h1>5. Lang module</h1>
+			</div>
+			<div class="well">Coming soon!!!</div>
+			<hr>
+			<a name="less"></a>
+			<div class="page-header">
+				<h1>6. Less module</h1>
+			</div>
+			<div class="well">Coming soon!!!</div>
+			<hr>
+			<a name="session"></a>
+			<div class="page-header">
+				<h1>7. Session module</h1>
+			</div>
+			<div class="well">Coming soon!!!</div>
+		</div>
+	</body>
+</html>
