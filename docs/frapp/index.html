@@ -26,8 +26,8 @@
 			<ol>
 				<li><a href="#api">Frapp Public A.P.I.</a></li>
 				<ol>
-					<li><a href="#apiMethods">Methods</a></li>
 					<li><a href="#apiEvents">Events</a></li>
+					<li><a href="#apiMethods">Methods</a></li>
 				</ol>
 				<li><a href="#bootstrap">Bootstrap module</a></li>
 				<li><a href="#handlebars">Handlebars module</a></li>
@@ -40,6 +40,17 @@
 			<div class="page-header">
 				<h1>1. Frapp Public A.P.I.</h1>
 			</div>
+			<a name="apiEvents"></a>
+			<h3>Events</h3>
+			<h4><code>window.addEventListener('frapp.init')</code></h4>
+			<blockquote>
+				<p>Triggered to the current Frapp window when the modules are loaded &amp; the A.P.I. is ready.</p>
+				<p>event.detail can contain the optional launch params for the current Frapp (<code>params</code>) and the current session user (<code>session</code>)</p>
+			</blockquote>
+			<h4><code>window.addEventListener('frapp.signin', callback)</code></h4>
+			<blockquote><p>Trigered to all Frapp windows when the user signs in.</p></blockquote>
+			<h4><code>window.addEventListener('frapp.signout', callback)</code></h4>
+			<blockquote><p>Trigered to all Frapp windows when the user signs out.</p></blockquote>
 			<a name="apiMethods"></a>
 			<h3>Methods</h3>
 			<h4><code>FRAPP.close()</code></h4>
@@ -102,18 +113,6 @@
 			<blockquote><p>Returns a key value storage on the current Frapp's namespace</p></blockquote>
 			<h4><code>FRAPP.version()</code></h4>
 			<blockquote><p>Returns the Frapp engine version &amp; the current Frapp version</p></blockquote>
-
-			<a name="apiEvents"></a>
-			<h3>Events</h3>
-			<h4><code>window.addEventListener('frapp.init')</code></h4>
-			<blockquote>
-				<p>Triggered to the current Frapp windo when the modules are loaded &amp; the A.P.I. is ready.</p>
-				<p>event.detail can contain the optional launch params for the current Frapp (<code>params</code>) and the current session user (<code>session</code>)</p>
-			</blockquote>
-			<h4><code>window.addEventListener('frapp.signin', callback)</code></h4>
-			<blockquote><p>Trigered to all Frapp windows when the user signs in.</p></blockquote>
-			<h4><code>window.addEventListener('frapp.signout', callback)</code></h4>
-			<blockquote><p>Trigered to all Frapp windows when the user signs out.</p></blockquote>
 			<hr>
 			<a name="bootstrap"></a>
 			<div class="page-header">
