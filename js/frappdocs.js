@@ -1,14 +1,11 @@
 window.addEventListener('frapp.init', function(e) {
 	var select = $('header select'),
-		viewer = $('#viewer'),
-		onChange = function() {
-			viewer.attr('src', select.val());
-		};
+		iframe = $('#viewer'),
+		docs = $('#frappDocs');
 
 	[
 		{
-			name : 'Frapp',
-			url : 'docs/frapp/index.html'
+			name : 'Frapp'
 		},
 		{
 			name : 'Bootstrap',
@@ -27,9 +24,19 @@ window.addEventListener('frapp.init', function(e) {
 			url : 'http://handlebarsjs.com/'
 		}
 	].forEach(function(doc) {
-		select.append($('<option value="' + doc.url + '">' + doc.name + '</option>'));
+		select.append($('<option value="' + (doc.url || doc.name) + '">' + doc.name + '</option>'));
 	});
 
-	select.change(onChange);
-	onChange();
+	select.change(function() {
+		if(select.val() === 'Frapp') {
+			iframe.hide();
+			docs.show();
+		} else {
+			iframe.attr('src', select.val());
+			docs.hide();
+			iframe.show();
+		}
+	});
+
+	$('body').show();
 });
