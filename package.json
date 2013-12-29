@@ -1,15 +1,15 @@
 {
-    "name": "FrappDocs",
-    "version": "0.0.1",
-    "author": "Daniel Esteban Nombela<dani@hellacoders.com>",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/danielesteban/FrappDocs.git"
-    },
-    "modules" : [
-        "jquery",
-        "bootstrap",
-    	"less"
-    ],
-    "main": "index.html"
+	"name": "FrappDocs",
+	"version": "0.0.1",
+	"author": "Daniel Esteban Nombela <dani@hellacoders.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/danielesteban/FrappDocs.git"
+	},
+	"modules" : [
+		"jquery",
+		"bootstrap",
+		"less"
+	],
+	"main": "index.html"
 }
