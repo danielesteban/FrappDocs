@@ -1,6 +1,6 @@
 {
 	"name" : "FrappDocs",
-	"version" : "0.0.1",
+	"version" : "0.0.2",
 	"description" : "A documentation viewer.",
 	"author" : "Daniel Esteban Nombela <dani@hellacoders.com>",
 	"repository" : {
